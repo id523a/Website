@@ -93,6 +93,7 @@ function CreatePDF() {
 		pageHeight = 297 * mm;
 		margin = 30 * mm;
 		topMargin = 15 * mm;
+		headerGap = 10 * mm;
 		
 		headerImageSize = 55 * mm;
 		headerImageBorder = 1.5 * mm;
@@ -115,12 +116,12 @@ function CreatePDF() {
 		socialMediaSpacing = 2.5 * mm;
 		socialMediaDY = socialMediaHeight + socialMediaSpacing;
 		
-		headerSize = socialMediaY + socialMediaDY * links.length + 10 * mm;
+		headerSize = socialMediaY + socialMediaDY * links.length + 8 * mm;
 				
 		pdf = new PDFDocument({
 		size:[pageWidth,pageHeight],
 		margins:{
-			top:headerSize,
+			top:margin,
 			left:margin,
 			right:margin,
 			bottom:margin},
@@ -200,8 +201,14 @@ function CreatePDF() {
 			pdf.link(socialMediaX, socialMediaY, socialMediaWidth, socialMediaHeight, links[i]);
 			socialMediaY += socialMediaDY;
 		}
-		
+
 		// Draw content
+		pdf.font('F_Regular').fontSize(12).fillColor("black");
+		pdf.x = margin;
+		pdf.y = headerSize + headerGap;
+		pdf.text("Proin mattis ante non metus tristique, at laoreet justo ornare. Pellentesque eleifend quis turpis quis elementum. Duis maximus luctus aliquet. Integer sed tincidunt neque, eget facilisis tellus. Nam in vulputate erat. Suspendisse lacinia leo eu nunc mollis, nec pharetra lacus tempus. ");
+		pdf.text("Fusce id tristique leo. Pellentesque malesuada lobortis consequat. Duis et enim at ex gravida posuere. Vestibulum porttitor fermentum gravida. Curabitur auctor quam ut pulvinar auctor. Duis vel felis in ligula iaculis ultricies vitae nec quam.  Nulla consequat enim sed arcu imperdiet,");
+		pdf.text("nec finibus urna condimentum. Nullam at imperdiet orci. Nam id orci eget odio mattis molestie. Aliquam non placerat turpis, volutpat ultricies sapien. Aliquam varius vulputate viverra. Donec dignissim elementum lacus a blandit. Maecenas convallis elit id posuere fermentum. Quisque porta purus at enim venenatis, tempor dictum sem faucibus. Mauris tellus nibh, eleifend et enim a, pharetra viverra nisi.");
 		
 		pdf.end();
 		stream.on("finish", function() {
