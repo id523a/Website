@@ -41,8 +41,8 @@ var page = <?php echo($loadedJson); ?>
 		</div>
 	</div>
 	<div class="thinPane">
-		<script type="text/javascript" src="pdfbutton.js"></script>
-		<a id="pdfd_init" class="pdfDownload" href="javascript:;" onclick="CreatePDF()">Download PDF</a>
+		
+		<a id="pdfd_init" class="pdfDownload" href="javascript:;" onclick="CreatePDF()">Generate PDF</a>
 		<a id="pdfd" class="hide" href="#" download="<?php echo($filename); ?>.pdf">Download PDF</a>
 		<span id="errordisplay" class="hide"></span>
 	</div>
@@ -117,6 +117,7 @@ var page = <?php echo($loadedJson); ?>
 		<a href="https://www.linkedin.com/in/id523a"><img class="icon" src="icons/in.png" alt="LinkedIn" /></a>
 		<a href="https://github.com/id523a"><img class="icon" src="icons/gh.png" alt="GitHub" /></a>
 		<a href="https://soundcloud.com/id523a"><img class="icon" src="icons/sc.png" alt="SoundCloud" /></a>
+		<script type="text/javascript" src="pdfbutton.js"></script>
 	</div>
 </div>
 
