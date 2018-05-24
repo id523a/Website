@@ -1,0 +1,18 @@
+[
+	{"type":"h1", "content":"PluckSynth"},
+	{"type":"p", "content":"Languages/frameworks used: ", "italic":true},
+	{"type":"", "content":"C++, "},
+	{"type":"", "content":"WDL-OL", "link":"https://github.com/olilarkin/wdl-ol"},
+	{"type":"p", "content":"PluckSynth is a sound synthesizer plugin, which was designed to mimic the sound of string instruments, such as a guitar or violin. It implements "},
+	{"type":"", "content":"Karplus-Strong string synthesis", "link":"https://en.wikipedia.org/wiki/Karplus%E2%80%93Strong_string_synthesis"},
+	{"type":"", "content":" as a plugin that can be used in a variety of music production software. WDL-OL was used in order to allow interaction with such software in a cross-platform manner. Although the user interface is rudimentary and based on an example plugin included with WDL-OL, the code that produces the sounds is customized."},
+	{"type":"img", "content":"projects/plucksynth/screenshot.png", "alt":"Screenshot of Pluck Synth"},
+	{"type":"p", "content":"I used PluckSynth in one of my music tracks (available on "},
+	{"type":"", "content":"YouTube", "link":"https://www.youtube.com/watch?v=0PPXfyNc2ig"},
+	{"type":"", "content":"), to mimic the sound of a string ensemble."},
+	{"type":"h2", "content":"Karplus-Strong synthesis"},
+	{"type":"img", "content":"https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Karplus-strong-schematic.svg/640px-Karplus-strong-schematic.svg.png", "alt":"Diagram of how Karplus-Strong synthesis operates"},
+	{"type":"p", "content":"Karplus-Strong synthesis consists of 3 parts: A burst of white noise, a short delay, and a filter. This method of sound synthesis models the physics of real-world string instruments, making it an example of "},
+	{"type":"", "content":"physical modelling synthesis", "link":"https://en.wikipedia.org/wiki/Physical_modelling_synthesis"},
+	{"type":"", "content":". The noise burst models the added energy to the string as a result of plucking or bowing it; the time delay models the way a string resonates; and the filter models energy losses from the string over time. All of these features are tunable using the controls pictured in the PluckSynth screenshot."}
+]

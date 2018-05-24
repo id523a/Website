@@ -1,3 +1,5 @@
 [
-	{"type":"h1", "content":""},
+	{"type":"h1", "content":"Project List"},
+	{"type":"p", "content":"PluckSynth", "link":"?p=plucksynth"},
+	{"type":"", "content":": Digital synthesizer plugin"}
 ]
