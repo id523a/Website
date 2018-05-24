@@ -41,7 +41,7 @@ var page = <?php echo($loadedJson); ?>
 		</div>
 	</div>
 	<div class="thinPane">
-		<script type="text/javascript" src="genpdf.js"></script>
+		<script type="text/javascript" src="pdfbutton.js"></script>
 		<a id="pdfd_init" class="pdfDownload" href="javascript:;" onclick="CreatePDF()">Download PDF</a>
 		<a id="pdfd" class="hide" href="#" download="<?php echo($filename); ?>.pdf">Download PDF</a>
 		<span id="errordisplay" class="hide"></span>
