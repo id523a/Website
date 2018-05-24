@@ -6,6 +6,7 @@
 	    req.onload = function() {
 	        var arrayBuffer = this.response;
 	        if (arrayBuffer) {
+	        	document.getElementById("errordisplay").innerText = "Fetched: " + uri;
 	            resolve(arrayBuffer);
 	        } else {
 	        	reject(new Error(this.statusText));
@@ -31,9 +32,6 @@ function appendScript(uri) {
 	});
 }
 function CreatePDF() {
-	document.getElementById("errordisplay").innerText = "Fetching assets...";
-	document.getElementById("errordisplay").className = "pdfErrorDisplay";
-	document.getElementById("pdfd_init").className = "hide";
 	mm = 2.834646;
 	links = [
 		'mailto:edward@giles.net.au',
@@ -86,6 +84,9 @@ function CreatePDF() {
 			}
 		}
 	});
+	document.getElementById("errordisplay").innerText = "Fetching assets...";
+	document.getElementById("errordisplay").className = "pdfErrorDisplay";
+	document.getElementById("pdfd_init").className = "hide";
 	Promise.all(loadAssets).then(function(assetArray) {
 		document.getElementById("errordisplay").innerText = "Generating PDF...";
 		pageWidth = 210 * mm;
@@ -178,7 +179,6 @@ function CreatePDF() {
 		pdf.text('Edward Giles', headerImageX, headerImageY + headerImageSize + 2 * headerImageBorder);
 		
 		// Draw social media buttons
-		
 		for (var i = 0; i < links.length; i++) {
 			pdf.roundedRect(
 			socialMediaX, socialMediaY + 0.1,
@@ -200,6 +200,7 @@ function CreatePDF() {
 			pdf.link(socialMediaX, socialMediaY, socialMediaWidth, socialMediaHeight, links[i]);
 			socialMediaY += socialMediaDY;
 		}
+		
 		// Draw content
 		
 		pdf.end();
