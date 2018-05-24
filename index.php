@@ -1,7 +1,15 @@
 ﻿<?php
 $filename = preg_replace('/[^A-Za-z ]/', '', strval(empty($_GET['p']) ? '' : $_GET['p']));
 $filename = $filename == '' ? 'index' : $filename;
-$loadedJson = file_get_contents("projects/$filename.json");
+$loadedJson = @file_get_contents("projects/$filename.json");
+if (!$loadedJson) {
+		$loadedJson = <<<default_doc
+[
+	{"type":"h1", "content":"Error"},
+	{"type":"p", "content":"No page called '$filename' could be found."}
+]
+default_doc;
+}
 $page = json_decode($loadedJson, true);
 ?>
 <!DOCTYPE html>
@@ -25,7 +33,7 @@ var page = <?php echo($loadedJson); ?>
 		</div>
 		<div class="socialMedia">
 			<a class="mediaLink" href="mailto:edward@giles.net.au"><img class="icon" src="icons/mail.png" alt="E-mail" />edward@giles.net.au</a>
-			<a class="mediaLink" href="skype:edward@giles.net.au"><img class="icon" src="icons/skype.png" alt="Skype" />edward@giles.net.au</a>
+			<a class="mediaLink" href="skype://edward@giles.net.au"><img class="icon" src="icons/skype.png" alt="Skype" />edward@giles.net.au</a>
 			<a class="mediaLink" href="https://www.youtube.com/channel/UCdWI3Bs_d_Z89sWYJz9unXQ"><img class="icon" src="icons/yt.png" alt="YouTube" />id523a</a>
 			<a class="mediaLink" href="https://www.linkedin.com/in/id523a"><img class="icon" src="icons/in.png" alt="LinkedIn" />Edward Giles</a>
 			<a class="mediaLink" href="https://github.com/id523a"><img class="icon" src="icons/gh.png" alt="GitHub" />id523a</a>
@@ -39,6 +47,7 @@ var page = <?php echo($loadedJson); ?>
 		<span id="errordisplay" class="hide"></span>
 	</div>
 	<div class="content">
+	<?php if ($filename != 'index') echo('<p><a href="?p=index" style="font-style:italic;">&#8594; Index</a></p>'); ?>
 	<?php
 	$tag = '';
 	foreach ($page as $k=>$pageItem) {
@@ -55,7 +64,12 @@ var page = <?php echo($loadedJson); ?>
 			$italic = boolval($pageItem['italic']) ? 'italic' : 'normal';
 		}
 		$color = empty($pageItem['color']) ? '' : $pageItem['color'];
-		$formatted = $boldGiven || $italicGiven || !empty($color);
+		$linkGiven = array_key_exists('link', $pageItem);
+		$link = '#';
+		if ($linkGiven) {
+			$link = $pageItem['link'];
+		}
+		$formatted = $boldGiven || $italicGiven || !empty($color) || $linkGiven;
 		if ($type != '') {
 			if (!empty($tag)) {
 				echo("</$tag>");
@@ -68,7 +82,11 @@ var page = <?php echo($loadedJson); ?>
 			}
 		}
 		if ($formatted) {
-			echo('<span style="');
+			if ($linkGiven) {
+				echo("<a href=\"$link\" style=\""); 
+			} else {
+				echo('<span style="');
+			}
 			if ($boldGiven) { echo("font-weight:$bold;"); }
 			if ($italicGiven) { echo("font-style:$italic;"); }
 			if (!empty($color)) { echo("color:$color;"); }
@@ -87,13 +105,14 @@ var page = <?php echo($loadedJson); ?>
 		} else {
 			echo(htmlspecialchars($content));
 		}
-		if ($formatted) { echo('</span>'); }
+		if ($formatted) { echo($linkGiven ? '</a>' : '</span>'); }
 	}
 	?>
+	<?php if ($filename != 'index') echo('<p><a href="?p=index" style="font-style:italic;">&#8594; Index</a></p>'); ?>
 	</div>
 	<div class="thinPane">
 		<a href="mailto:edward@giles.net.au"><img class="icon" src="icons/mail.png" alt="E-mail" /></a>
-		<a href="skype:edward@giles.net.au"><img class="icon" src="icons/skype.png" alt="Skype" /></a>
+		<a href="skype://edward@giles.net.au"><img class="icon" src="icons/skype.png" alt="Skype" /></a>
 		<a href="https://www.youtube.com/channel/UCdWI3Bs_d_Z89sWYJz9unXQ"><img class="icon" src="icons/yt.png" alt="YouTube" /></a>
 		<a href="https://www.linkedin.com/in/id523a"><img class="icon" src="icons/in.png" alt="LinkedIn" /></a>
 		<a href="https://github.com/id523a"><img class="icon" src="icons/gh.png" alt="GitHub" /></a>

@@ -2,16 +2,17 @@
 	font-family:'Open Sans', Arial, sans-serif;
 }
 
+a[href] {
+	text-decoration:none;
+}
+
 body {
 	background-color:#EEEEFF;
 }
 
-img,.thumbnail {
+.thumbnail {
 	border:5px white solid;
 	border-radius:10px;
-}
-
-.thumbnail {
 	width:250px;
 	height:250px;
 }
@@ -27,8 +28,8 @@ img,.thumbnail {
 .mainContainer {
 	background-color:white;
 	width:auto;
-	margin-left:10%;
-	margin-right:10%;
+	margin-left:20%;
+	margin-right:20%;
 }
 
 h1,h2 {
