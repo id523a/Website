@@ -120,7 +120,7 @@ var page = <?php echo($loadedJson); ?>
 		<a href="https://www.linkedin.com/in/id523a"><img class="icon" src="icons/in.png" alt="LinkedIn" /></a>
 		<a href="https://github.com/id523a"><img class="icon" src="icons/gh.png" alt="GitHub" /></a>
 		<a href="https://soundcloud.com/id523a"><img class="icon" src="icons/sc.png" alt="SoundCloud" /></a>
-		<script type="text/javascript" src="pdfbutton.js"></script>
+		<script type="text/javascript" src="js/pdfbutton.js"></script>
 	</div>
 </div>
 

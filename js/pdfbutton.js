@@ -58,7 +58,7 @@ function CreatePDF() {
 	document.getElementById("pdfd_init").className = "hide";
 	Promise.all(loadAssets).then(function(assetArray) {
 		document.getElementById("errordisplay").innerText = "Generating PDF...";
-		pdfworker = new Worker("renderpdf.js");
+		pdfworker = new Worker("js/renderpdf.js");
 		pdfworker.postMessage({"assetIndices":assetIndices, "socialIconIndex":socialIconIndex, "assetArray":assetArray}, assetArray);
 		pdfworker.onmessage = function (ev) {
 			if (ev.data[0]) {

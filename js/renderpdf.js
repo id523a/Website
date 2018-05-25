@@ -1,9 +1,9 @@
-importScripts("lib/pdfkit.js", "lib/blob-stream.js");
 new Promise(function(resolve, reject) {
 onmessage = function(event) {
 	resolve(event.data);
 }
 }).then(function(imports) {
+	importScripts("pdfkit.js", "blob-stream.js");
 	try {
 		mm = 2.834646;
 		links = [
