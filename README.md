@@ -1,2 +1,2 @@
 # Website
-My personal website, to be hosted at id523a.com.
+My personal website, currently hosted at http://id523a.com
