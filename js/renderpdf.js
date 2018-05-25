@@ -7,6 +7,7 @@ onmessage = function(event) {
 	try {
 		mm = 2.834646;
 		links = [
+			'http://www.id523a.com',
 			'mailto:edward@giles.net.au',
 			'skype://edward@giles.net.au',
 			'https://www.youtube.com/channel/UCdWI3Bs_d_Z89sWYJz9unXQ',
@@ -15,6 +16,7 @@ onmessage = function(event) {
 			'https://soundcloud.com/id523a',
 		];
 		socialMediaTexts = [
+			'http://www.id523a.com',
 			'edward@giles.net.au',
 			'edward@giles.net.au',
 			'id523a',
@@ -47,14 +49,14 @@ onmessage = function(event) {
 		socialMediaX = headerImageX + headerImageSize + headerColSpacing;
 		socialMediaY = headerImageY;
 		socialMediaWidth = 65 * mm;
-		socialMediaIconSize = 8 * mm;
+		socialMediaIconSize = 7 * mm;
 		socialMediaPadding = 1.5 * mm;
 		socialMediaHeight = socialMediaIconSize + 2 * socialMediaPadding;
 		socialMediaBorderRadius = 2 * mm;
 		socialMediaLeftBorder = 1.5 * mm;
 		socialMediaLeftPadding = socialMediaLeftBorder + socialMediaPadding;
 		socialMediaFontSize = 12;
-		socialMediaSpacing = 2.5 * mm;
+		socialMediaSpacing = 2 * mm;
 		socialMediaDY = socialMediaHeight + socialMediaSpacing;
 		
 		headerSize = socialMediaY + socialMediaDY * links.length + 8 * mm;

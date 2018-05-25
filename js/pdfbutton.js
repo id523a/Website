@@ -21,6 +21,7 @@
 
 function CreatePDF() {
 	defaultUris = [
+		'icons/net.png',
 		'icons/mail.png',
 		'icons/skype.png',
 		'icons/yt.png',
