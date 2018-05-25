@@ -37,9 +37,16 @@ body {
 
 .mainContainer {
 	background-color:white;
-	width:auto;
 	margin-left:20%;
 	margin-right:20%;
+	width:auto;
+}
+
+@media screen and (max-width: 520px) {
+	.mainContainer {
+		margin-left:0%;
+		margin-right:0%;
+	}
 }
 
 h1,h2 {
