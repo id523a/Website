@@ -13,9 +13,8 @@ default_doc;
 $page = json_decode($loadedJson, true);
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
 <head>
-<meta content="en-us" http-equiv="Content-Language">
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <link rel="stylesheet" href="fonts.css" />
 <link rel="stylesheet" href="style.css" />
