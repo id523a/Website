@@ -74,21 +74,18 @@ onmessage = function(event) {
 		pdf.registerFont('F_Bold', assetArray[1]);
 		pdf.registerFont('F_Italic', assetArray[2]);
 		pdf.registerFont('F_BoldItalic', assetArray[3]);
-		
-		function pdfAddImage(index, x, y, options) {
-			if (options == null) { options = {}; }
+		function img(index) {
 			if (typeof index === 'string') {
 				index = assetIndices[index];
 			}
-			options.imageRegistryIndex = index;
-			pdf.image(assetArray[index], x, y, options);
+			return pdf.openImage(assetArray[index]);
 		}
-		
+
 		pdf.on("pageAdded", function() {
 			pdf.save();
 			for (var i = 0; i < links.length; i++) {
 				iconX = footerStartX + footerSpacing * i;
-				pdfAddImage(i + socialIconIndex, iconX, footerY, {width:10*mm});
+				pdf.image(img(i + socialIconIndex), iconX, footerY, {width:10*mm});
 				pdf.link(iconX, footerY, 10*mm, 10*mm, links[i]);
 			}
 			pdf.restore();
@@ -113,7 +110,7 @@ onmessage = function(event) {
 			headerImageSize, headerImageSize,
 			headerImageBorderRadius - headerImageBorder
 		).clip();
-		pdfAddImage('face.jpg', headerImageX, headerImageY, {width:headerImageSize});
+		pdf.image(img('face.jpg'), headerImageX, headerImageY, {width:headerImageSize});
 		pdf.restore();
 		pdf.fillColor('white').font('F_Bold').fontSize(headerFontSize)
 		pdf.text('Edward Giles', headerImageX, headerImageY + headerImageSize + 2 * headerImageBorder);
@@ -132,7 +129,7 @@ onmessage = function(event) {
 			).fill("white");
 			iconX = socialMediaX + socialMediaLeftPadding;
 			iconY = socialMediaY + socialMediaPadding;
-			pdfAddImage(i + socialIconIndex, iconX, iconY, {width:socialMediaIconSize});
+			pdf.image(img(i + socialIconIndex), iconX, iconY, {width:socialMediaIconSize});
 			pdf.font('F_').fontSize(socialMediaFontSize).fillColor("black");
 			textX = iconX + socialMediaIconSize + socialMediaSpacing;
 			textY = iconY + 0.5 * (socialMediaIconSize - pdf.currentLineHeight());
