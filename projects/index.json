@@ -7,5 +7,7 @@
 	{"type":"", "content":" using C# / NAudio"},
 	{"type":"h2", "content":"Graphics"},
 	{"type":"p", "content":"IFSRender", "link":"?p=ifs"},
-	{"type":"", "content":": Fractal-drawing web application"}
+	{"type":"", "content":": Fractal-drawing web application"},
+	{"type":"p", "content":"Procedurally-generated terrain", "link":"?p=landscape"},
+	{"type":"", "content":": Video with FFmpeg, procedural generation, raytracing"}
 ]

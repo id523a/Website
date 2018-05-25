@@ -1,0 +1,16 @@
+[
+	{"type":"h1", "content":"Procedurally-generated Landscape"},
+	{"type":"p", "content":"Languages/frameworks used: ", "italic":true},
+	{"type":"", "content":"C#.NET, "},
+	{"type":"", "content":"ffmpeg", "link":"https://ffmpeg.org/"},
+	{"type":"p", "content":"The result of this project was a "},
+	{"type":"", "content":"video clip", "link":"https://www.youtube.com/watch?v=OAiZ4dCPlqA"},
+	{"type":"", "content":" showing a fly-through of a virtual 'cave'. The cave surface was"},
+	{"type":"", "content":"procedurally generated", "link":"https://en.wikipedia.org/wiki/Procedural_generation"},
+	{"type":"", "content":"by creating a height-map using "},
+	{"type":"", "content":"fractal noise", "link":"https://en.wikipedia.org/wiki/Fractal_landscape"},
+	{"type":"", "content":", and then rendering the terrain in 3D using "},
+	{"type":"", "content":"raytracing", "link":"https://en.wikipedia.org/wiki/Raytracing"},
+	{"type":"", "content":". Fractal noise gave the terrain a realistic 'rough' pattern without it being too jagged. Once all of the frames of the video had been rendered, ffmpeg was used to assemble them into a single video file."},
+	{"type":"img", "content":"projects/landscape.jpg", "alt":"Watch the landscape video", "link":"https://www.youtube.com/watch?v=OAiZ4dCPlqA"}
+]
