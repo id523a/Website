@@ -208,11 +208,24 @@ onmessage = function(event) {
 				console.log(link);
 				color = 'blue';
 			}
+			if (pageItem.hasOwnProperty('bold')) {
+				bold = !!pageItem.bold;
+			}
+			if (pageItem.hasOwnProperty('italic')) {
+				italic = !!pageItem.italic;
+			}
+			if (pageItem.hasOwnProperty('color')) {
+				color = pageItem.color;
+			}
 			fontName = 'F_';
 			if (bold) fontName += 'Bold';
 			if (italic) fontName += 'Italic';
 			pdf.font(fontName).fontSize(fontSize).fillColor(color);
-			pdf.text(pageItem.content, {continued:true});
+			textOptions = {continued:true};
+			if (linkGiven) {
+				textOptions.link = link;
+			}
+			pdf.text(pageItem.content, textOptions);
 		});
 		
 		pdf.end();
