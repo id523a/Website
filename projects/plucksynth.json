@@ -6,7 +6,7 @@
 	{"type":"p", "content":"PluckSynth is a sound synthesizer plugin, which was designed to mimic the sound of string instruments, such as a guitar or violin. It implements "},
 	{"type":"", "content":"Karplus-Strong string synthesis", "link":"https://en.wikipedia.org/wiki/Karplus%E2%80%93Strong_string_synthesis"},
 	{"type":"", "content":" as a plugin that can be used in a variety of music production software. WDL-OL was used in order to allow interaction with such software in a cross-platform manner. Although the user interface is rudimentary and based on an example plugin included with WDL-OL, the code that produces the sounds is customized."},
-	{"type":"img", "content":"projects/plucksynth_gui.png", "alt":"Screenshot of Pluck Synth"},
+	{"type":"img", "content":"projects/plucksynth_gui.jpg", "alt":"Screenshot of Pluck Synth"},
 	{"type":"p", "content":"I used PluckSynth in one of my music tracks (available on "},
 	{"type":"", "content":"YouTube", "link":"https://www.youtube.com/watch?v=0PPXfyNc2ig"},
 	{"type":"", "content":"), to mimic the sound of a string ensemble."},
