@@ -107,6 +107,9 @@ var page = <?php echo($loadedJson); ?>
 		}
 		if ($formatted) { echo($linkGiven ? '</a>' : '</span>'); }
 	}
+	if (!empty($tag)) {
+		echo("</$tag>");
+	}
 	?>
 	<?php if ($filename != 'index') echo('<p><a href="?p=index" style="font-style:italic;">&#8594; Index</a></p>'); ?>
 	</div>
