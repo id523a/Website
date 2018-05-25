@@ -57,21 +57,24 @@ function CreatePDF() {
 	document.getElementById("errordisplay").className = "pdfErrorDisplay";
 	document.getElementById("pdfd_init").className = "hide";
 	Promise.all(loadAssets).then(function(assetArray) {
-		document.getElementById("errordisplay").innerText = "Generating PDF...";
-		pdfworker = new Worker("js/renderpdf.js");
-		pdfworker.postMessage({"page":page, "assetIndices":assetIndices, "socialIconIndex":socialIconIndex, "assetArray":assetArray}, assetArray);
-		pdfworker.onmessage = function (ev) {
-			if (ev.data[0]) {
-				document.getElementById("errordisplay").className = "hide";
-				link = document.getElementById("pdfd");
-				link.href = ev.data[1];
-				link.className = "pdfDownload";
-				link.click();
-			} else {
-				throw new Error(ev.data[1]);
-			}
-			pdfworker.terminate();
-		}
+		return new Promise(function(resolve, reject) {
+			document.getElementById("errordisplay").innerText = "Generating PDF...";
+			pdfworker = new Worker("js/renderpdf.js");
+			pdfworker.postMessage({"page":page, "assetIndices":assetIndices, "socialIconIndex":socialIconIndex, "assetArray":assetArray}, assetArray);
+			pdfworker.onmessage = function (ev) {
+				if (ev.data[0]) {
+					document.getElementById("errordisplay").className = "hide";
+					link = document.getElementById("pdfd");
+					link.href = ev.data[1];
+					link.className = "pdfDownload";
+					link.click();
+					resolve(0);
+				} else {
+					reject(new Error(ev.data[1]));
+				}
+				pdfworker.terminate();
+			};
+		});
 	}).catch(function(error) {
 		document.getElementById("errordisplay").innerText = "Error when creating PDF: " + error.toString();
 	});

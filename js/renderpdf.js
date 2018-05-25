@@ -30,7 +30,7 @@ onmessage = function(event) {
 	
 		pageWidth = 210 * mm;
 		pageHeight = 297 * mm;
-		margin = 30 * mm;
+		margin = 25 * mm;
 		topMargin = 15 * mm;
 		headerGap = 10 * mm;
 		
@@ -70,7 +70,7 @@ onmessage = function(event) {
 		footerSpacing = 15 * mm;
 		stream = pdf.pipe(blobStream());
 		
-		pdf.registerFont('F_Regular', assetArray[0]);
+		pdf.registerFont('F_', assetArray[0]);
 		pdf.registerFont('F_Bold', assetArray[1]);
 		pdf.registerFont('F_Italic', assetArray[2]);
 		pdf.registerFont('F_BoldItalic', assetArray[3]);
@@ -133,7 +133,7 @@ onmessage = function(event) {
 			iconX = socialMediaX + socialMediaLeftPadding;
 			iconY = socialMediaY + socialMediaPadding;
 			pdfAddImage(i + socialIconIndex, iconX, iconY, {width:socialMediaIconSize});
-			pdf.font('F_Regular').fontSize(socialMediaFontSize).fillColor("black");
+			pdf.font('F_').fontSize(socialMediaFontSize).fillColor("black");
 			textX = iconX + socialMediaIconSize + socialMediaSpacing;
 			textY = iconY + 0.5 * (socialMediaIconSize - pdf.currentLineHeight());
 			pdf.text(socialMediaTexts[i], textX, textY);
@@ -142,17 +142,83 @@ onmessage = function(event) {
 		}
 		
 		// Draw content
-		pdf.font('F_Regular').fillColor("black");
+		
 		pdf.x = margin;
 		pdf.y = headerSize + headerGap;
 		
+		mainType = 'p';
+		endText = false;
 		page.forEach(function(pageItem) {
-			console.log(pageItem);
+			color = "black";
+			bold = false;
+			italic = false;
+			link = "";
+			linkGiven = false;
+			fontSize = 11;
+			switch (mainType) {
+				case 'h1':
+					bold = true;
+					fontSize = 24;
+					break;
+				case 'h2':
+					bold = true;
+					fontSize = 14;
+					break;
+				default:
+					bold = false;
+					fontSize = 10;
+					break;
+			}
+			if (pageItem.type !== '') {
+				mainType = pageItem.type;
+				if (endText) {
+					pdf.text(' ');
+					pdf.fontSize(12);
+					pdf.moveDown(1.0);
+				}
+				if (pageItem.type === 'img') {
+					endText = false;
+					// Insert image
+					return;
+				} else {
+					endText = true;
+					switch (mainType) {
+						case 'h1':
+							bold = true;
+							fontSize = 24;
+							break;
+						case 'h2':
+							bold = true;
+							fontSize = 14;
+							break;
+						default:
+							bold = false;
+							fontSize = 10;
+							break;
+					}
+				}
+			}
+			// Load other formatting
+			if (pageItem.hasOwnProperty('link')) {
+				link = pageItem.link;
+				linkGiven = true;
+				if (link.indexOf("://") === -1) {
+					link = 'localhost/portfolio/' + link;
+				}
+				console.log(link);
+				color = 'blue';
+			}
+			fontName = 'F_';
+			if (bold) fontName += 'Bold';
+			if (italic) fontName += 'Italic';
+			pdf.font(fontName).fontSize(fontSize).fillColor(color);
+			pdf.text(pageItem.content, {continued:true});
 		});
 		
 		pdf.end();
 		stream.on("finish", function() {
 			postMessage([true, stream.toBlobURL('application/pdf')]);
+			//postMessage([false, "Done"]);
 		});
 	} catch (err) {
 		postMessage([false, err.toString()]);
