@@ -33,6 +33,8 @@ onmessage = function(event) {
 		margin = 25 * mm;
 		topMargin = 15 * mm;
 		headerGap = 10 * mm;
+		pageAreaWidth = pageWidth - 2 * margin;
+		pageAreaHeight = pageHeight - 2 * margin;
 		
 		headerImageSize = 55 * mm;
 		headerImageBorder = 1.5 * mm;
@@ -176,6 +178,30 @@ onmessage = function(event) {
 				if (pageItem.type === 'img') {
 					endText = false;
 					// Insert image
+					image = img(pageItem.content);
+					imageWidth = image.width;
+					imageHeight = image.height;
+					pageBefore = false;
+					if (imageWidth > pageAreaWidth) {
+						imageHeight *= pageAreaWidth / imageWidth;
+						imageWidth = pageAreaWidth;
+					}
+					if (imageHeight > pageAreaHeight) {
+						imageWidth *= pageAreaHeight / imageHeight;
+						imageHeight = pageAreaHeight;
+						pageBefore = true;
+					} else {
+						pageHeightRemaining = pageHeight - pdf.y - margin;
+						if (pageHeightRemaining < imageHeight) {
+							pageBefore = true;
+						}
+					}
+					if (pageBefore) {
+						pdf.addPage();
+					}
+					pdf.image(image, {width:imageWidth, height:imageHeight});
+					pdf.fontSize(12);
+					pdf.moveDown(1.0);
 					return;
 				} else {
 					endText = true;
