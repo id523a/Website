@@ -1,4 +1,7 @@
-ErrorDocument 404 /error.php
+RewriteEngine On
+ErrorDocument 404 http://id523a.com/?p=error404&e=1
+ErrorDocument 403 http://id523a.com/?p=error403&e=1
+ErrorDocument 500 http://id523a.com/?p=error500&e=1
 <FilesMatch "License\.txt|README\.md">
         Order Deny,Allow
         Deny from all

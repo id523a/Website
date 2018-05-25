@@ -1,5 +1,5 @@
 ﻿<?php
-$filename = preg_replace('/[^A-Za-z ]/', '', strval(empty($_GET['p']) ? '' : $_GET['p']));
+$filename = preg_replace('/[^A-Za-z0-9]/', '', strval(empty($_GET['p']) ? '' : $_GET['p']));
 $filename = $filename == '' ? 'index' : $filename;
 $loadedJson = @file_get_contents("projects/$filename.json");
 if (!$loadedJson) {
