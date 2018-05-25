@@ -1,9 +1,18 @@
 ﻿* {
 	font-family:'Open Sans', Arial, sans-serif;
+	font-size:12pt;
 }
 
 a[href] {
 	text-decoration:none;
+}
+
+h1 {
+	font-size:28pt;
+}
+
+h2 {
+	font-size:16pt;
 }
 
 body {
