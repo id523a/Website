@@ -1,7 +1,11 @@
 [
 	{"type":"h1", "content":"Project List"},
+	{"type":"h2", "content":"Audio/Music"},
 	{"type":"p", "content":"PluckSynth", "link":"?p=plucksynth"},
-	{"type":"", "content":": Digital synthesizer plugin"},
+	{"type":"", "content":": Physical modelling synthesizer plugin"},
+	{"type":"p", "content":"Additive synthesizer", "link":"?p=addsynth"},
+	{"type":"", "content":" using C# / NAudio"},
+	{"type":"h2", "content":"Graphics"},
 	{"type":"p", "content":"IFSRender", "link":"?p=ifs"},
 	{"type":"", "content":": Fractal-drawing web application"}
 ]

@@ -1,0 +1,16 @@
+[
+	{"type":"h1", "content":"Additive Synthesizer"},
+	{"type":"p", "content":"Languages/frameworks used: ", "italic":true},
+	{"type":"", "content":"C#.NET, Windows Forms, "},
+	{"type":"", "content":"NAudio", "link":"https://github.com/naudio/NAudio"},
+	{"type":"p", "content":"The traditional method of sound synthesis ("},
+	{"type":"", "content":"subtractive synthesis", "link":"https://en.wikipedia.org/wiki/Subtractive_synthesis"},
+	{"type":"", "content":") relies on using a small number of oscillators to generate a sound that contains many harmonics, and then shaping the sound using various filters and effects. On the other hand, "},
+	{"type":"", "content":"additive synthesis", "link":"https://en.wikipedia.org/wiki/Additive_synthesis"},
+	{"type":"", "content":" uses many simple oscillators, one for each harmonic of the resulting sound. The timbre of the sound is determined by the relative volumes of all of the oscillators."},
+	{"type":"p", "content":"This project is an additive synthesizer written in C#.NET, using Windows Forms to display a simple user interface and NAudio to interact with the sound-card. The synthesizer only creates a single sustained note, but, using external software, this can be recorded into a file and played back at different pitches to create melodies. Some of my older music, such as my "},
+	{"type":"", "content":"cover of 'Megalovania' by Toby Fox", "link":"https://soundcloud.com/id523a/megalovania-cover"},
+	{"type":"", "content":", makes use of this synthesizer to create some of the sounds."},
+	{"type":"img", "content":"projects/addsynth_gui.png", "alt":"Screenshot of the additive synthesizer"},
+	{"type":"p", "content":"Since the sound synthesis technique was the main focus of the project, the UI is quite crude."}
+]
