@@ -27,14 +27,16 @@ var page = <?php echo($loadedJson); ?>
 <body>
 <div class="mainContainer">
 	<?php include('assets/header.php'); ?>
+	<?php if (empty($_GET['e'])) { ?>
 	<div class="thinPane">
 		
 		<a id="pdfd_init" class="pdfDownload" href="javascript:;" onclick="CreatePDF()">Generate PDF</a>
 		<a id="pdfd" class="hide" href="#" download="<?php echo($filename); ?>.pdf">Download PDF</a>
 		<span id="errordisplay" class="hide"></span>
 	</div>
+	<?php } ?>
 	<div class="content">
-	<?php if ($filename != 'index') echo('<p><a href="?p=index" style="font-style:italic;">&#8594; Index</a></p>'); ?>
+	<?php if ($filename != 'index' && empty($_GET['e'])) echo('<p><a href="?p=index" style="font-style:italic;">&#8594; Index</a></p>'); ?>
 	<?php
 	$tag = '';
 	foreach ($page as $k=>$pageItem) {
@@ -101,7 +103,9 @@ var page = <?php echo($loadedJson); ?>
 	<?php if ($filename != 'index') echo('<p><a href="?p=index" style="font-style:italic;">&#8594; Index</a></p>'); ?>
 	</div>
 	<?php include('assets/footer.php'); ?>
+	<?php if (empty($_GET['e'])) { ?>
 	<script type="text/javascript" src="js/pdfbutton.js"></script>
+	<?php } ?>
 </div>
 
 </body>
