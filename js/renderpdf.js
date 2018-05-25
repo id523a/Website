@@ -152,7 +152,6 @@ onmessage = function(event) {
 			bold = false;
 			italic = false;
 			link = "";
-			linkGiven = false;
 			fontSize = 11;
 			switch (mainType) {
 				case 'h1':
@@ -224,7 +223,6 @@ onmessage = function(event) {
 			// Load other formatting
 			if (pageItem.hasOwnProperty('link')) {
 				link = pageItem.link;
-				linkGiven = true;
 				if (link.indexOf("://") === -1) {
 					link = 'localhost/portfolio/' + link;
 				}
@@ -244,10 +242,7 @@ onmessage = function(event) {
 			if (bold) fontName += 'Bold';
 			if (italic) fontName += 'Italic';
 			pdf.font(fontName).fontSize(fontSize).fillColor(color);
-			textOptions = {continued:true};
-			if (linkGiven) {
-				textOptions.link = link;
-			}
+			textOptions = {continued:true, link:link};
 			pdf.text(pageItem.content, textOptions);
 		});
 		
