@@ -2,4 +2,6 @@
 	{"type":"h1", "content":"Project List"},
 	{"type":"p", "content":"PluckSynth", "link":"?p=plucksynth"},
 	{"type":"", "content":": Digital synthesizer plugin"}
+	{"type":"p", "content":"IFSRender", "link":"?p=ifs"},
+	{"type":"", "content":": Fractal-drawing web application"}
 ]
