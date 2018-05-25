@@ -26,6 +26,7 @@ onmessage = function(event) {
 		assetArray = imports.assetArray;
 		assetIndices = imports.assetIndices;
 		socialIconIndex = imports.socialIconIndex;
+		page = imports.page;
 	
 		pageWidth = 210 * mm;
 		pageHeight = 297 * mm;
@@ -141,12 +142,13 @@ onmessage = function(event) {
 		}
 		
 		// Draw content
-		pdf.font('F_Regular').fontSize(12).fillColor("black");
+		pdf.font('F_Regular').fillColor("black");
 		pdf.x = margin;
 		pdf.y = headerSize + headerGap;
-		pdf.text("Proin mattis ante non metus tristique, at laoreet justo ornare. Pellentesque eleifend quis turpis quis elementum. Duis maximus luctus aliquet. Integer sed tincidunt neque, eget facilisis tellus. Nam in vulputate erat. Suspendisse lacinia leo eu nunc mollis, nec pharetra lacus tempus. ");
-		pdf.text("Fusce id tristique leo. Pellentesque malesuada lobortis consequat. Duis et enim at ex gravida posuere. Vestibulum porttitor fermentum gravida. Curabitur auctor quam ut pulvinar auctor. Duis vel felis in ligula iaculis ultricies vitae nec quam.  Nulla consequat enim sed arcu imperdiet,");
-		pdf.text("nec finibus urna condimentum. Nullam at imperdiet orci. Nam id orci eget odio mattis molestie. Aliquam non placerat turpis, volutpat ultricies sapien. Aliquam varius vulputate viverra. Donec dignissim elementum lacus a blandit. Maecenas convallis elit id posuere fermentum. Quisque porta purus at enim venenatis, tempor dictum sem faucibus. Mauris tellus nibh, eleifend et enim a, pharetra viverra nisi.");
+		
+		page.forEach(function(pageItem) {
+			console.log(pageItem);
+		});
 		
 		pdf.end();
 		stream.on("finish", function() {
