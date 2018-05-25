@@ -1,7 +1,7 @@
 RewriteEngine On
-RewriteCond %{HTTP_HOST} !^www\.id523a\.com [NC]
 RewriteCond %{HTTP_HOST} !^$
-RewriteRule ^/?(.*) http://www.id523a.com/$1 [L,R=301,NE] 
+RewriteCond %{HTTP_HOST} ^(.*)id523a\.(net|me) [NC]
+RewriteRule ^/?(.*) http://%1id523a.com/$1 [L,R=301,NE] 
 ErrorDocument 404 http://id523a.com/?p=error404
 ErrorDocument 403 http://id523a.com/?p=error403
 <FilesMatch "License\.txt|README\.md">
