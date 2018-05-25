@@ -1,4 +1,4 @@
-ErrorDocument 404 error.php
+ErrorDocument 404 /error.php
 <FilesMatch "License\.txt|README\.md">
         Order Deny,Allow
         Deny from all

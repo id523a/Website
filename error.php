@@ -30,8 +30,8 @@ var page = <?php echo($loadedJson); ?>
 	<div class="thinPane">
 	</div>
 	<div class="content">
-	<?php if ($filename != 'index') echo('<p><a href="?p=index" style="font-style:italic;">&#8594; Index</a></p>'); ?>
 	<h1>Error: 404 Not Found</h1>
+	<p><a href="index.php" style="font-style:italic;">&#8594; Index</a></p>
 	</div>
 	<?php include('assets/footer.php'); ?>
 </div>
