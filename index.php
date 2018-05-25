@@ -19,6 +19,7 @@ $page = json_decode($loadedJson, true);
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <link rel="stylesheet" href="fonts.css" />
 <link rel="stylesheet" href="style.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Edward Giles</title>
 <script type="text/javascript">
 var page = <?php echo($loadedJson); ?>

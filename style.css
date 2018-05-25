@@ -24,7 +24,7 @@ body {
 	border:5px white solid;
 	border-radius:10px;
 	width:250px;
-	height:250px;
+	max-width:95%;
 }
 
 .icon {
@@ -35,18 +35,16 @@ body {
 	margin:4px 8px 4px 4px;
 }
 
+.iconGroup {
+	display:inline;
+}
+
+
 .mainContainer {
 	background-color:white;
 	margin-left:20%;
 	margin-right:20%;
 	width:auto;
-}
-
-@media screen and (max-width: 520px) {
-	.mainContainer {
-		margin-left:0%;
-		margin-right:0%;
-	}
 }
 
 h1,h2 {
@@ -81,6 +79,10 @@ h1,h2 {
 	margin-right:15px;
 }
 
+.bio h1 {
+	text-align:center;
+}
+
 .socialMedia {
 	flex-grow:0;
 	margin-left:15px;
@@ -90,7 +92,7 @@ h1,h2 {
 .mediaLink {
 	display:block;
 	background-color:white;
-	width:250px;
+	width:240px;
 	padding:1px 3px 1px 6px;
 	margin-top:6px;
 	margin-bottom:6px;
@@ -111,6 +113,14 @@ h1,h2 {
 .thinPane {
 	background-color:white;
 	padding:20px 30px 12px 30px;
+}
+
+.centerContainer {
+	text-align:center;
+}
+
+.centerContent {
+	display:inline-block;
 }
 
 .pdfDownload {
@@ -138,4 +148,18 @@ h1,h2 {
 
 .hide {
 	display:none;
+}
+
+@media screen and (max-width: 440px) {
+	.iconGroup {
+		display:block;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.mainContainer {
+		margin-left:0%;
+		margin-right:0%;
+		width:100%;
+	}
 }
