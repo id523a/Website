@@ -3,7 +3,7 @@
 	{"type":"p", "content":"Languages/frameworks used: ", "italic":true},
 	{"type":"", "content":"PHP, HTML5, CSS, JavaScript, "},
 	{"type":"", "content":"PDFKit", "link":"http://pdfkit.org/"},
-	{"type":"p", "content":"This website was created as a central location for information about my computing projects. It also allows people to download printable copies of the project summaries as PDF documents, which are rendered in the browser using PDFKit. "},
+	{"type":"p", "content":"This website was created as a central location for information about my computing projects. In addition to displaying the project information as a web-page, it also allows people to download printable copies of the project summaries as PDF documents. These documents are rendered in the browser using PDFKit, reducing server load. "},
 	{"type":"", "content":"XmlHttpRequest", "link":"https://www.w3schools.com/xml/xml_http.asp"},
 	{"type":"", "content":"s are used to download the images and fonts that would be embedded in the PDF document, and "},
 	{"type":"", "content":"HTML5 Web Workers", "link":"https://www.w3schools.com/HTML/html5_webworkers.asp"},
