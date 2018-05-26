@@ -1,0 +1,14 @@
+[
+	{"type":"h1", "content":"id523a.com"},
+	{"type":"p", "content":"Languages/frameworks used: ", "italic":true},
+	{"type":"", "content":"PHP, HTML5, CSS, JavaScript, "},
+	{"type":"", "content":"PDFKit", "link":"http://pdfkit.org/"},
+	{"type":"p", "content":"This website was created as a central location for information about my computing projects. It also allows people to download printable copies of the project summaries as PDF documents, which are rendered in the browser using PDFKit. "},
+	{"type":"", "content":"XmlHttpRequest", "link":"https://www.w3schools.com/xml/xml_http.asp"},
+	{"type":"", "content":"s are used to download the images and fonts that would be embedded in the PDF document, and "},
+	{"type":"", "content":"HTML5 Web Workers", "link":"https://www.w3schools.com/HTML/html5_webworkers.asp"},
+	{"type":"", "content":" are used to allow the PDFs to be rendered in the background without disrupting the main user interface."},
+	{"type":"p", "content":"The content of every page is stored in JSON format. A PHP script renders this into HTML for online display, and the JavaScript PDF renderer takes in the page content in the same format."},
+	{"type":"p", "content":"This site also uses a custom stylesheet (CSS) that is responsive to the device's screen size."},
+	{"type":"p", "content":"Licensing information", "link":"License.txt"}
+]
