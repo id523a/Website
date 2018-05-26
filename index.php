@@ -82,7 +82,7 @@ var page = <?php echo($loadedJson); ?>
 			echo('">');
 		}
 		if ($type == 'img') {
-			echo('<img src="');
+			echo('<div class="imgScroll"><img src="');
 			echo($content);
 			echo('" alt="');
 			if (!empty($pageItem['alt'])) {
@@ -90,7 +90,7 @@ var page = <?php echo($loadedJson); ?>
 			} else {
 				echo('Image');
 			}
-			echo('" />');
+			echo('" /></div>');
 		} else {
 			echo(htmlspecialchars($content));
 		}
