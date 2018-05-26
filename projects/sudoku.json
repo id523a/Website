@@ -1,0 +1,10 @@
+[
+	{"type":"h1", "content":"Sudoku Solver"},
+	{"type":"p", "content":"Languages/frameworks used: ", "italic":true},
+	{"type":"", "content":"C#.NET, Windows Forms"},
+	{"type":"p", "content":"This program was coded in C#, and it uses a "},
+	{"type":"", "content":"backtracking algorithm", "link":"https://en.wikipedia.org/wiki/Backtracking"},
+	{"type":"", "content":" to search for possible solutions to Sudoku problems. The program is used by filling in the known squares of the Sudoku problem and then pressing the 'Solve' button. If the solution is taking a long time, the process can be cancelled. For a typical Sudoku puzzle, finding the solution only takes a small fraction of a second."},
+	{"type":"", "content":"If there are no numbers entered, or too few to determine a unique solution, the 'Solve' button will generate a randomized solution. The program also has a feature which counts the number of valid solutions, up to a maximum of 10000. This feature can help with creating new Sudoku puzzles, by informing the user of whether or not a partial board is uniquely solvable."},
+	{"type":"img", "content":"projects/sudoku_gui.png", "alt":"Screenshot of a solved Sudoku board"}
+]

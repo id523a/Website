@@ -12,5 +12,8 @@
 	{"type":"p", "content":"IFSRender", "link":"?p=ifs"},
 	{"type":"", "content":": Fractal-drawing web application"},
 	{"type":"p", "content":"Procedurally-generated terrain", "link":"?p=landscape"},
-	{"type":"", "content":": Video with FFmpeg, procedural generation, raytracing"}
+	{"type":"", "content":": Video with FFmpeg, procedural generation, raytracing"},
+	{"type":"h2", "content":"Miscellaneous"},
+	{"type":"p", "content":"Sudoku solver", "link":"?p=sudoku"},
+	{"type":"", "content":" in C# with Windows Forms"}
 ]
