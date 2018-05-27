@@ -1,19 +1,44 @@
 [
-	{"type":"h1", "content":"Project List"},
-	{"type":"h2", "content":"Audio/Music"},
-	{"type":"p", "content":"PluckSynth", "link":"?p=plucksynth"},
-	{"type":"", "content":": Physical modelling synthesizer plugin"},
-	{"type":"p", "content":"Additive synthesizer", "link":"?p=addsynth"},
-	{"type":"", "content":" using C# / NAudio"},
-	{"type":"h2", "content":"Web Technology"},
-	{"type":"p", "content":"id523a.com", "link":"?p=website"},
-	{"type":"", "content":": This portfolio website"},
+	{"type":"h1", "content":"Project Index"},
+	
 	{"type":"h2", "content":"Graphics"},
 	{"type":"p", "content":"IFSRender", "link":"?p=ifs"},
 	{"type":"", "content":": Fractal-drawing web application"},
 	{"type":"p", "content":"Procedurally-generated terrain", "link":"?p=landscape"},
 	{"type":"", "content":": Video with FFmpeg, procedural generation, raytracing"},
+	{"type":"p", "content":"IOCCC 2018 - Most unstable", "link":"http://ioccc.org/2018/giles/hint.html"},
+	{"type":"", "content":": Falling-sand animation using C and "},
+	{"type":"", "content":"SDL", "link":"http://libsdl.org/"},
+	{"type":"p", "content":"SwapGame", "link":"https://github.com/id523a/SwapGame"},
+	{"type":"", "content":": Simple board game using C++ and SDL"},
+
+	{"type":"h2", "content":"Audio/Music"},
+	{"type":"p", "content":"PluckSynth", "link":"?p=plucksynth"},
+	{"type":"", "content":": Physical modelling synthesizer plugin"},
+	{"type":"p", "content":"Additive synthesizer", "link":"?p=addsynth"},
+	{"type":"", "content":" using C# / "},
+	{"type":"", "content":"NAudio", "link":"https://github.com/naudio/NAudio"},
+	{"type":"p", "content":"Music visualizer in C# with NAudio and "},
+	{"type":"", "content":"FFmpeg", "link":"https://ffmpeg.org/"},
+
+	{"type":"h2", "content":"Physics Simulation"},
+	{"type":"p", "content":"GUI physics simulator (point masses and springs) in C# / Windows Forms"},
+	{"type":"p", "content":"Simulation of the sound of a vibrating bar, using C++ and "},
+	{"type":"", "content":"Armadillo", "link":"http://arma.sourceforge.net/"},
+	{"type":"p", "content":"Electronic circuit simulator, using C# and "},
+	{"type":"", "content":"Math.NET Numerics", "link":"https://numerics.mathdotnet.com/"},
+	
+	{"type":"h2", "content":"Internet/Web Technology"},
+	{"type":"p", "content":"Project portfolio website", "link":"?p=website"},
+	{"type":"p", "content":"IB Computer Science IA: Inventory tracker web application with Bootstrap + PHP + MySQL database"},
+	{"type":"p", "content":"Client-server multiplayer card game in Java"},
+	
 	{"type":"h2", "content":"Miscellaneous"},
 	{"type":"p", "content":"Sudoku solver", "link":"?p=sudoku"},
-	{"type":"", "content":" in C# with Windows Forms"}
+	{"type":"", "content":" in C# with Windows Forms"},
+	{"type":"p", "content":"IB Computer Science '"},
+	{"type":"", "content":"pseudocode", "link":"projects/IB_pseudocode_notation.pdf"},
+	{"type":"", "content":"' interpreter in C++ with custom garbage collector"},
+	{"type":"p", "content":"PolynomialMath: Java command-line calculator for polynomials"}
+	
 ]
