@@ -70,6 +70,9 @@ var page = <?php echo($loadedJson); ?>
 				echo("<$tag>");
 			}
 		}
+		if ($type == 'img') {
+			echo('<div class="imgScroll">');
+		}
 		if ($formatted) {
 			if ($linkGiven) {
 				echo("<a href=\"$link\" style=\""); 
@@ -82,7 +85,7 @@ var page = <?php echo($loadedJson); ?>
 			echo('">');
 		}
 		if ($type == 'img') {
-			echo('<div class="imgScroll"><img src="');
+			echo('<img src="');
 			echo($content);
 			echo('" alt="');
 			if (!empty($pageItem['alt'])) {
@@ -90,11 +93,12 @@ var page = <?php echo($loadedJson); ?>
 			} else {
 				echo('Image');
 			}
-			echo('" /></div>');
+			echo('" />');
 		} else {
 			echo(htmlspecialchars($content));
 		}
 		if ($formatted) { echo($linkGiven ? '</a>' : '</span>'); }
+		if ($type == 'img') { echo('</div>'); }
 	}
 	if (!empty($tag)) {
 		echo("</$tag>");

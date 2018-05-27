@@ -73,6 +73,11 @@ h1,h2 {
 	overflow:auto;
 }
 
+.imgScroll img {
+	max-width:300%;
+	height:auto;
+}
+
 .bio {
 	flex-grow:0;
 	margin-left:1em;
