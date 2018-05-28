@@ -34,6 +34,10 @@ body {
 	margin:0.2em 0.6em 0.2em 0.2em;
 }
 
+.nospam {
+	height:1.389em;
+}
+
 .iconGroup {
 	display:inline-block;
 }
