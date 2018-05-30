@@ -38,7 +38,7 @@
 	{"type":"", "content":" in C# with Windows Forms"},
 	{"type":"p", "content":"IB Computer Science '"},
 	{"type":"", "content":"pseudocode", "link":"projects/IB_pseudocode_notation.pdf"},
-	{"type":"", "content":"' interpreter in C++ with custom garbage collector"},
+	{"type":"", "content":"' interpreter in C#"},
 	{"type":"p", "content":"PolynomialMath: Java command-line calculator for polynomials"}
 	
 ]
