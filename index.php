@@ -82,7 +82,11 @@ var page = <?php echo($loadedJson); ?>
 			if ($boldGiven) { echo("font-weight:$bold;"); }
 			if ($italicGiven) { echo("font-style:$italic;"); }
 			if (!empty($color)) { echo("color:$color;"); }
-			echo('">');
+			if ($linkGiven && !empty($pageItem['download'])) {
+				echo('" download="">');
+			} else {
+				echo('">');
+			}
 		}
 		if ($type == 'img') {
 			echo('<img src="');
