@@ -43,16 +43,13 @@ onmessage = function(event) {
 		pageAreaWidth = pageWidth - 2 * margin;
 		pageAreaHeight = pageHeight - 2 * margin;
 		
-		headerImageSize = 55 * mm;
-		headerImageBorder = 1.5 * mm;
-		headerImageBorderRadius = 2.5 * mm;
-		headerImageX = margin + 3 * mm;
-		headerImageY = topMargin + 3 * mm;
-		headerFontSize = 20;
-		headerColSpacing = 10 * mm;
+		headerFontSize = 30;
+		headerX = margin + 3 * mm;
+		headerY = topMargin + 3 * mm;
 		
-		socialMediaX = headerImageX + headerImageSize + headerColSpacing;
-		socialMediaY = headerImageY;
+		socialMediaXStart = headerX;
+		socialMediaX = socialMediaXStart;
+		socialMediaY = headerY + headerFontSize * 1.4 + 3 * mm;
 		socialMediaWidth = 65 * mm;
 		socialMediaIconSize = 7 * mm;
 		socialMediaPadding = 1.5 * mm;
@@ -63,8 +60,11 @@ onmessage = function(event) {
 		socialMediaFontSize = 12;
 		socialMediaSpacing = 2 * mm;
 		socialMediaDY = socialMediaHeight + socialMediaSpacing;
+		socialMediaDX = socialMediaWidth + 5 * mm;
+		socialMediaColCount = 2;
+		socialMediaCol = 0;
 		
-		headerSize = socialMediaY + socialMediaDY * links.length + 8 * mm;
+		headerSize = socialMediaY + socialMediaDY * Math.ceil(links.length / socialMediaColCount) + 8 * mm;
 				
 		pdf = new PDFDocument({
 		size:[pageWidth,pageHeight],
@@ -105,24 +105,8 @@ onmessage = function(event) {
 		pdf.rect(
 			0, 0, pageWidth, headerSize
 		).fill("#336699");
-		pdf.roundedRect(
-			headerImageX, headerImageY,
-			headerImageSize, headerImageSize,
-			headerImageBorderRadius
-		).fill("white");
-		headerImageX += headerImageBorder;
-		headerImageY += headerImageBorder;
-		headerImageSize -= 2 * headerImageBorder;
-		pdf.save();
-		pdf.roundedRect(
-			headerImageX, headerImageY,
-			headerImageSize, headerImageSize,
-			headerImageBorderRadius - headerImageBorder
-		).clip();
-		pdf.image(img('face.jpg'), headerImageX, headerImageY, {width:headerImageSize});
-		pdf.restore();
 		pdf.fillColor('white').font('F_Bold').fontSize(headerFontSize)
-		pdf.text('Edward Giles', headerImageX, headerImageY + headerImageSize + 2 * headerImageBorder);
+		pdf.text('Edward Giles', headerX, headerY);
 		
 		// Draw social media buttons
 		for (var i = 0; i < links.length; i++) {
@@ -144,7 +128,13 @@ onmessage = function(event) {
 			textY = iconY + 0.5 * (socialMediaIconSize - pdf.currentLineHeight());
 			pdf.text(socialMediaTexts[i], textX, textY);
 			pdf.link(socialMediaX, socialMediaY, socialMediaWidth, socialMediaHeight, links[i]);
-			socialMediaY += socialMediaDY;
+			socialMediaX += socialMediaDX;
+			socialMediaCol += 1;
+			if (socialMediaCol >= socialMediaColCount) {
+				socialMediaCol = 0;
+				socialMediaX = socialMediaXStart;
+				socialMediaY += socialMediaDY;
+			}
 		}
 		
 		// Draw content

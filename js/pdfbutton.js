@@ -27,8 +27,7 @@ function CreatePDF() {
 		'icons/yt.png',
 		'icons/in.png',
 		'icons/gh.png',
-		'icons/sc.png',
-		'face.jpg',
+		'icons/sc.png'
 	];
 	loadAssets = [
 		loadUri('fonts/OpenSans-Regular.ttf'),

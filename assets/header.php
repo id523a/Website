@@ -1,7 +1,5 @@
 <div class="header">
-	<div class="bio">
-		<h1>Edward Giles</h1>
-	</div>
+	<h1>Edward Giles</h1>
 	<div class="mediaLinks">
 		<span class="mediaLink"><img class="icon" src="icons/mail.png" alt="E-mail" /><img class="nospam" src="icons/nospam.png" alt="E-mail address" /></span>
 		<a class="mediaLink" href="skype://fanboy7"><img class="icon" src="icons/skype.png" alt="Skype" /><img class="nospam" src="icons/nospam.png" alt="E-mail address" /></a>
