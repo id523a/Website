@@ -3,7 +3,7 @@
 		<img class="thumbnail" alt="" src="face.jpg" />
 		<h1>Edward Giles</h1>
 	</div>
-	<div class="socialMedia">
+	<div class="mediaLinks">
 		<span class="mediaLink"><img class="icon" src="icons/mail.png" alt="E-mail" /><img class="nospam" src="icons/nospam.png" alt="E-mail address" /></span>
 		<a class="mediaLink" href="skype://fanboy7"><img class="icon" src="icons/skype.png" alt="Skype" /><img class="nospam" src="icons/nospam.png" alt="E-mail address" /></a>
 		<a class="mediaLink" href="https://www.youtube.com/channel/UCdWI3Bs_d_Z89sWYJz9unXQ"><img class="icon" src="icons/yt.png" alt="YouTube" />id523a</a>

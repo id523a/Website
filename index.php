@@ -36,7 +36,7 @@ var page = <?php echo($loadedJson); ?>
 	</div>
 	<?php } ?>
 	<div class="content">
-	<?php if ($filename != 'index' && empty($_GET['e'])) echo('<p><a href="?p=index" style="font-style:italic;">&#8594; Index</a></p>'); ?>
+	<?php if ($filename != 'index' && empty($_GET['e'])) echo('<p><a href="index" style="font-style:italic;">&#8594; Index</a></p>'); ?>
 	<?php
 	$tag = '';
 	foreach ($page as $k=>$pageItem) {
@@ -108,7 +108,7 @@ var page = <?php echo($loadedJson); ?>
 		echo("</$tag>");
 	}
 	?>
-	<?php if ($filename != 'index') echo('<p><a href="?p=index" style="font-style:italic;">&#8594; Index</a></p>'); ?>
+	<?php if ($filename != 'index') echo('<p><a href="index" style="font-style:italic;">&#8594; Index</a></p>'); ?>
 	</div>
 	<?php include('assets/footer.php'); ?>
 	<?php if (empty($_GET['e'])) { ?>
