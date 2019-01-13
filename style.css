@@ -91,6 +91,7 @@ h1,h2 {
 
 .bio h1 {
 	text-align:center;
+	margin:0;
 }
 
 .mediaLinks {
