@@ -1,6 +1,5 @@
 <div class="header">
 	<div class="bio">
-		<img class="thumbnail" alt="" src="face.jpg" />
 		<h1>Edward Giles</h1>
 	</div>
 	<div class="mediaLinks">

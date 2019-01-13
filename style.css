@@ -59,8 +59,9 @@ h1,h2 {
 	background-color:#336699;
 	padding:1em 2em;
 	display:flex;
-	flex-direction:row;
+	flex-direction:column;
 	flex-wrap:wrap;
+	align-items:center;
 	justify-content:center;
 }
 
