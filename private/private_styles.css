@@ -1,0 +1,33 @@
+.index_link {
+	font-style:italic;
+}
+.action_button {
+	width:7.2em;
+	margin:0.2em;
+}
+.download_list {
+	list-style:none;
+	padding-left:0;
+}
+.download_list li {
+	cursor:default;
+}
+.download_list li:hover {
+	background-color:#EEEEFF;
+}
+.download_link {
+	margin-left:0.5em;
+}
+#upload_file, #rename_to {
+	width:16em;
+}
+.status_container {
+	padding:0.5em 1em;
+	background-color:#FFCCCC;
+}
+.status_container.success {
+	background-color:#CCFFDD;
+}
+.after_status {
+	margin-top:0.5em;
+}
