@@ -1,1 +1,4 @@
-private/*
+private/files/*
+private/.htaccess
+private/.htpasswd
+!private/files/.htaccess
