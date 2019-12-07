@@ -11,8 +11,8 @@ RewriteRule ^/?(.*) https://%1id523a.com/$1 [R=301,NE]
 
 RewriteRule ^([A-Za-z0-9]+)$ ?p=$1 [L]
 
-ErrorDocument 404 https://www.id523a.com/?p=error404&e=1
-ErrorDocument 403 https://www.id523a.com/?p=error403&e=1
+ErrorDocument 404 https://id523a.com/?p=error404&e=1
+ErrorDocument 403 https://id523a.com/?p=error403&e=1
 <FilesMatch "README\.md">
         Order Deny,Allow
         Deny from all
