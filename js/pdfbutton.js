@@ -1,4 +1,4 @@
-﻿function loadUri(uri) {
+function loadUri(uri) {
 	return new Promise(function(resolve, reject) {
 		req = new XMLHttpRequest();
 	    req.open("GET", uri, true);
