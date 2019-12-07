@@ -7,7 +7,7 @@ onmessage = function(event) {
 	try {
 		mm = 2.834646;
 		links = [
-			'http://www.id523a.com',
+			'https://id523a.com',
 			'mailto:',
 			'skype://',
 			'https://www.youtube.com/channel/UCdWI3Bs_d_Z89sWYJz9unXQ',
@@ -16,7 +16,7 @@ onmessage = function(event) {
 			'https://soundcloud.com/id523a',
 		];
 		socialMediaTexts = [
-			'http://www.id523a.com',
+			'https://id523a.com',
 			'ed',
 			'',
 			'id523a',
