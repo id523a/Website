@@ -10,7 +10,7 @@
 <title>Private</title>
 <script type="text/javascript" src="private_script.js"></script>
 </head>
-<body onload="jsInit();">
+<body>
 <div class="mainContainer" style="min-width:400px;">
 <div class="content">
 	<p><a href="../index" class="index_link">&#8594; Index</a></p>

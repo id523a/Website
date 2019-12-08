@@ -16,7 +16,7 @@ function fileChange() {
 		fileActionButtons.style.display = 'none';
 	}
 }
-function jsInit() {
+function jsInit(load_event) {
 	fileChange();
 	document.querySelectorAll('#file_select li').forEach(function(el) {
 		el.onclick = function(e) {
@@ -59,3 +59,5 @@ function confirmDelete(e) {
 		clearRename();
 	}
 }
+
+window.addEventListener('DOMContentLoaded', jsInit);
