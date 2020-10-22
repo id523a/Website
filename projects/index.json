@@ -13,6 +13,10 @@
 	{"type":"", "content":": Simple board game using C++ and SDL"},
 
 	{"type":"h2", "content":"Audio/Music"},
+	{"type":"p", "content":"IOCCC 2019 - Most in need of wide space", "link":"http://ioccc.org/2019/giles/hint.html"},
+	{"type":"", "content":": Applies artificial reverberation to a WAV file"},
+	{"type":"p", "content":"IOCCC 2020 - Most phony", "link":"http://ioccc.org/2020/whowon.html"},
+	{"type":"", "content":": Encodes and decodes telephone DTMF tones (Touch-Tone)"},
 	{"type":"p", "content":"PluckSynth", "link":"plucksynth"},
 	{"type":"", "content":": Physical modelling synthesizer plugin"},
 	{"type":"p", "content":"Additive synthesizer", "link":"addsynth"},
