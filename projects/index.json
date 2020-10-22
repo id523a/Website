@@ -26,7 +26,8 @@
 	{"type":"p", "content":"Project portfolio website", "link":"website"},
 	{"type":"p", "content":"Inventory tracker web application", "link":"mynonnas"},
 	{"type":"", "content":" with Bootstrap + PHP + MySQL database"},
-	{"type":"p", "content":"Client-server multiplayer card game in Java"},
+	{"type":"p", "content":"Multiplayer card game", "link":"cardgame"},
+	{"type":"", "content":" in Java"},
 	
 	{"type":"h2", "content":"Miscellaneous"},
 	{"type":"p", "content":"Sudoku solver", "link":"sudoku"},
