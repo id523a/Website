@@ -21,14 +21,6 @@
 	{"type":"p", "content":"Music visualizer", "link":"visualizer"},
 	{"type":"", "content":" in C# with NAudio and "},
 	{"type":"", "content":"FFmpeg", "link":"https://ffmpeg.org/"},
-
-	{"type":"h2", "content":"Physics Simulation"},
-	{"type":"p", "content":"GUI physics simulator", "link":"physicssandbox"},
-	{"type":"", "content":" in C# / Windows Forms"},
-	{"type":"p", "content":"Simulation of the sound of a vibrating bar, using C++ and "},
-	{"type":"", "content":"Armadillo", "link":"http://arma.sourceforge.net/"},
-	{"type":"p", "content":"Electronic circuit simulator, using C# and "},
-	{"type":"", "content":"Math.NET Numerics", "link":"https://numerics.mathdotnet.com/"},
 	
 	{"type":"h2", "content":"Internet/Web Technology"},
 	{"type":"p", "content":"Project portfolio website", "link":"website"},

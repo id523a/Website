@@ -1,6 +1,0 @@
-[
-	{"type":"h1", "content":"PhysicsSandbox"},
-	{"type":"p", "content":"Languages/frameworks used: ", "italic":true},
-	{"type":"", "content":"C#.NET, Windows Forms"},
-	{"type":"p", "content":"This program is a simple physics simulator. It simulates point masses with springs connecting them."},
-]
