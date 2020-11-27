@@ -34,11 +34,13 @@
 	{"type":"", "content":" in Java"},
 	
 	{"type":"h2", "content":"Miscellaneous"},
+	{"type":"p", "content":"Computer12", "link":"https://github.com/id523a/Computer12"},
+	{"type":"", "content":": 12-bit microprocessor implemented on a field-programmable gate array, in Verilog"},
 	{"type":"p", "content":"Sudoku solver", "link":"sudoku"},
 	{"type":"", "content":" in C# with Windows Forms"},
 	{"type":"p", "content":"IB Computer Science '"},
 	{"type":"", "content":"pseudocode", "link":"projects/IB_pseudocode_notation.pdf"},
 	{"type":"", "content":"' interpreter in C#"},
 	{"type":"p", "content":"PolynomialMath: Java command-line calculator for polynomials"}
-	
+
 ]
