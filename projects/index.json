@@ -41,6 +41,7 @@
 	{"type":"p", "content":"IB Computer Science '"},
 	{"type":"", "content":"pseudocode", "link":"projects/IB_pseudocode_notation.pdf"},
 	{"type":"", "content":"' interpreter in C#"},
-	{"type":"p", "content":"PolynomialMath: Java command-line calculator for polynomials"}
-
+	{"type":"p", "content":"PolynomialMath: Java command-line calculator for polynomials"},
+	{"type":"p", "content":"Submission to consultation", "link":"projects/edward-giles-tola.pdf"},
+	{"type":"", "content":" on the TOLA Act 2018 (Australian anti-encryption legislation)"}
 ]
