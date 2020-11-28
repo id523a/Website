@@ -9,7 +9,7 @@ onmessage = function(event) {
 		links = [
 			'https://id523a.com',
 			'mailto:',
-			'skype://',
+			null,
 			'https://www.youtube.com/channel/UCdWI3Bs_d_Z89sWYJz9unXQ',
 			'https://www.linkedin.com/in/id523a',
 			'https://github.com/id523a',
@@ -18,7 +18,7 @@ onmessage = function(event) {
 		socialMediaTexts = [
 			'https://id523a.com',
 			'ed',
-			'',
+			'id523a#2482',
 			'id523a',
 			'Edward Giles',
 			'id523a',
@@ -27,9 +27,7 @@ onmessage = function(event) {
 		socialMediaTexts[1] += 'ward@g';
 		socialMediaTexts[1] += 'iles.n';
 		socialMediaTexts[1] += 'et.au';
-		socialMediaTexts[2] = socialMediaTexts[1];
 		links[1] += socialMediaTexts[1];
-		links[2] += socialMediaTexts[1];
 		assetArray = imports.assetArray;
 		assetIndices = imports.assetIndices;
 		socialIconIndex = imports.socialIconIndex;
@@ -95,7 +93,9 @@ onmessage = function(event) {
 			for (var i = 0; i < links.length; i++) {
 				iconX = footerStartX + footerSpacing * i;
 				pdf.image(img(i + socialIconIndex), iconX, footerY, {width:10*mm});
-				pdf.link(iconX, footerY, 10*mm, 10*mm, links[i]);
+				if (links[i] !== null) {
+					pdf.link(iconX, footerY, 10*mm, 10*mm, links[i]);
+				}
 			}
 			pdf.restore();
 		});
